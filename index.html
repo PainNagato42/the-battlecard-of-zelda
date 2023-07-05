@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>BattleCard of Zelda</title>
+</head>
+
+<body>
+    <main>
+        <div class="choix_difficulte absolute flex flex_column justify_center align_center">
+            <div class="btn btn_difficulte large_20">Facile</div>
+            <div class="btn btn_difficulte large_20">Moyen</div>
+            <div class="btn btn_difficulte large_20">Difficile</div>
+        </div>
+        <div class="container">
+            <div class="btn action absolute">Combat</div>
+            <div class="player absolute">
+                <div class="contain_vies flex absolute"></div>
+                <div id="player_sprite">
+                    <img src="http://localhost/jeux/the_battlecard_of_zelda/img/link.png" alt="">
+                </div>
+            </div>
+            <div class="opponent absolute">
+                <div class="absolute">
+                    <p class="level">Level <span>1</span>: <span></span></p>
+                    <div class="contain_opponent_life">
+                        <div class="opponent_life"></div>
+                    </div>
+                    <div id="opponent_sprite"></div>
+                </div>
+            </div>
+            <p class="absolute combo">Combo : <span id="nb_combo"></span></p>
+            <div class="flex center justify_between large_20">
+                <div class="playerCard"></div>
+                <div class="opponentCard"></div>
+            </div>
+        </div>
+        <div class="mask"></div>
+        <div class="popup">
+            <p></p>
+            <a class="btn btn_recommencer" href="http://localhost/jeux/the_battlecard_of_zelda/">Recommencer</a>
+        </div>
+        <!--<div class="popup">
+            <p>Félicitation vous avez gagné</p>
+            <a class="btn btn_recommencer" href="http://localhost/jeux/the_battlecard_of_zelda/">Recommencer</a>
+        </div>-->
+        <!--<div class="popup defaite">
+            <p>GAME OVER</p>
+            <a class="btn btn_recommencer" href="http://localhost/jeux/the_battlecard_of_zelda/">Recommencer</a>
+        </div>-->
+    </main>
+</html>
+</body>

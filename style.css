@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f1f1f1;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+.action {
+  width: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 70%;
+}
+.contain_vies {
+  top: -20%;
+  width: 400px;
+}
+.coeur {
+  background-image: url("http://localhost/jeux/the_battlecard_of_zelda/img/coeur.png");
+  width: 20px;
+  height: 20px;
+}
+.contain_opponent_life {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 400px;
+  height: 20px;
+  margin-bottom: 40px;
+}
+.opponent_life {
+  background-color: #c6362e;
+  width: 100%;
+  height: 20px;
+}
+.level {
+  font-size: 1.4rem;
+}
+.player {
+  top: 31%;
+}
+.anim_damage {
+  animation: opacity 0.8s ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes opacity {
+  0% {
+    opacity: 1;
+  } 50% {
+    opacity: 0;
+  } 100% {
+    opacity: 1;
+  }
+}
+.opponent {
+  top: 19%;
+  right: 36%;
+  height: 500px;
+}
+.combo {
+  display: none;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 3rem;
+}
+.choix_difficulte {
+  height: 850px;
+  width: 100%;
+  background-color: #f1f1f1;
+  z-index: 100;
+}
+/*******************************************************/
+/* MISE EN FORME */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex_column {
+  flex-direction: column;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1450px;
+}
+.absolute {
+  position: absolute;
+}
+.relative {
+  position: relative;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.justify_center {
+  justify-content: center;
+}
+.justify_around {
+  justify-content: space-around;
+}
+.justify_between {
+  justify-content: space-between;
+}
+.align_center {
+  align-items: center;
+}
+.none {
+  display: none;
+}
+/*******************************************************/
+/* CARD */
+.card,
+.front,
+.back {
+  position: relative;
+  border: 1px solid gray;
+  background-color: #f1f1f1;
+  height: 180px;
+  width: 130px;
+  border-radius: 5px;
+}
+.left,
+.middle,
+.right {
+  position: absolute;
+  font-size: 3rem;
+}
+.right {
+  right: 1%;
+  bottom: 0;
+}
+label {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+.card-flip {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(-180deg);
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
+.front,
+.back {
+  backface-visibility: hidden;
+  transition: all 0.5s ease;
+}
+.back {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: rotateY(-180deg);
+  background-color: #266215;
+  background-image: url("http://localhost/jeux/the_battlecard_of_zelda/img/bouclier.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 180px;
+  width: 130px;
+}
+input.check_none {
+  display: none;
+}
+.rubis_vert,
+.rubis_bleu,
+.rubis_rouge,
+.rubis_violet {
+  width: 90px;
+  height: 90px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.rubis_vert {
+  background-image: url("http://localhost/jeux/the_battlecard_of_zelda/img/rubis_vert.png");
+}
+.rubis_bleu {
+  background-image: url("http://localhost/jeux/the_battlecard_of_zelda/img/rubis_bleu.png");
+}
+.rubis_rouge {
+  background-image: url("http://localhost/jeux/the_battlecard_of_zelda/img/rubis_rouge.png");
+}
+.rubis_violet {
+  background-image: url("http://localhost/jeux/the_battlecard_of_zelda/img/rubis_violet.png");
+}
+.card_j,
+.card_q,
+.card_k,
+.card_As {
+  height: 100px;
+}
+.card_j,
+.card_k {
+  width: 75px;
+}
+.card_j {
+  background-image: url("http://localhost/jeux/the_battlecard_of_zelda/img/J.png");
+}
+.card_q {
+  background-image: url("http://localhost/jeux/the_battlecard_of_zelda/img/Q.png");
+  width: 53px;
+}
+.card_k {
+  background-image: url("http://localhost/jeux/the_battlecard_of_zelda/img/K.png");
+}
+.card_As {
+  background-image: url("http://localhost/jeux/the_battlecard_of_zelda/img/A.png");
+  width: 73px;
+}
+/************************************/
+/* COLOR */
+.vert {
+  color: #2aa928;
+}
+.bleu {
+  color: #2f55b7;
+}
+.rouge {
+  color: #c6362e;
+}
+.violet {
+  color: #a630b1;
+}
+/***************************************/
+/* WIDTH */
+.large_20 {
+  width: 20%;
+}
+/****************************************/
+/* POPUP */
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 8px;
+  font-size: 50px;
+  z-index: 99;
+  text-align: center;
+}
+.victoire {
+  color: #2aa928;
+}
+/* .defaite {
+  color: rgb(177, 9, 9);
+} */
+.mask {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 98;
+}
+/*********************************************/
+/* BTN */
+
+.btn {
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid #222;
+  background-color: #266215;
+  color: #222;
+  font-size: 1.5rem;
+  padding: 12px 8px;
+  color: #f1f1f1;
+}
+.btn_difficulte {
+  margin: 40px 0;
+}
+.choix_difficulte div:nth-child(2) {
+  background-color:rgb(217, 141, 0);
+}
+.choix_difficulte div:nth-child(3) {
+  background-color: #c6362e;
+}
